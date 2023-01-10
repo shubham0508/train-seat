@@ -1,0 +1,10 @@
+CREATE SCHEMA `train_reservation` ;
+
+CREATE TABLE `train_reservation`.`seat_booking` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `seats_allocated` VARCHAR(45) NULL,
+  `allocated_seat_count` INT NULL DEFAULT 0,
+  PRIMARY KEY (`id`));
+
+
+CREATE TABLE IF NOT EXISTS `seat_bookings` (`id` INTEGER auto_increment , `seatsAllocated` VARCHAR(255), `allocatedSeatsCount` INTEGER DEFAULT 0, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
